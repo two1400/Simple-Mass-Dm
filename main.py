@@ -1,5 +1,4 @@
 #DONT SKID
-
 import discord
 
 client = discord.Client()
@@ -8,12 +7,12 @@ client = discord.Client()
 async def on_connect():
   for user in client.user.friends:
     try:
-      await user.send('ENTER MESSAGE HERE')
-      print(f'Mesaged: {user_name}')
+      await user.send('YOUR MESSAGE')
+      print(f"messaged: {user.name}")
     except:
-      print(f'Couldnt message: {user_name}')
-     
-client.run("ENTER TOKEN HERE", bot=False)     
+       print(f"couldnt message: {user.name}")
+
+client.run('YOUT TOKEN', bot=False)    
 
 
 #SIMPLE MASS DM CODED BY two#3082
